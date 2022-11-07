@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+/* ESTILOS GENERALES Y RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primario: #1d1d1d;
+  --primario-claro: #303030;
+  --texto: white;
+  --texto-nav: white;
+  --acento: #FFEA28;
+  --title-text: 'Bangers', cursive;
+}
+
+:root:has(#superman:checked) {
+  --primario: #1b268f;
+  --primario-claro: #750b0b;
+  --texto: white;
+  --texto-nav: white;
+  --acento: #FFEA28;
+}
+
+:root:has(#lobezno:checked) {
+  --primario: rgba(235, 164, 0, 0.658);
+  --primario-claro: rgba(235, 164, 0, 1);
+  --texto: #131313;
+  --texto-nav: white;
+  --acento: #0d2cda;
+}
+
+:root:has(#hawkeye:checked) {
+  --primario: #895cb3;
+  --primario-claro: #7c41c9;
+  --texto: #131313;
+  --texto-nav: white;
+  --acento: #00274c;
+}
+
+body {
+  background-color: var(--primario);
+  color: var(--texto);
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+a, a:visited {
+  color: var(--texto);
+}
+
+
+/* MENÚ DE NAVEGACIÓN */
+#barra-nav {
+  width: 100vw;
+  height: 80px;
+  background-color: var(--primario-claro);
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 1px 10px var(--acento);
+}
+
+nav {
+  margin: 0;
+  max-width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+nav > ul {
+  list-style: none;
+  height: 100%;
+}
+
+nav > ul li, nav>ul li a {
+  display: block;
+  height: 100%;
+}
+
+nav > ul li a {
+  padding: 2rem 2rem;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color .2s ease;
+}
+
+nav > ul li a.activo {
+  border-bottom: 5px solid var(--acento);
+}
+nav > ul li a:hover {
+  border-bottom: 5px solid var(--acento);
+  background-color: var(--primario);
+}
+
+#logo-sitio {
+  font-family: var(--title-text);
+  font-size: 2.5rem;
+}
+
+main {
+  margin-top: 80px;
+  max-width: 80%;
+}
+
+/* THEME PICKER */
+aside {
+  max-width: 6rem;
+  position: fixed;
+  right: 2rem;
+  top: 7rem;
+}
+
+#theme-picker > fieldset {
+  border: 2px solid var(--acento);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.logo-picker {
+  max-width: 3rem;
+  max-height: 4rem;
+  display: block;
+  margin: 0 auto;
+}
+
+#theme-picker label {
+  display: block;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+#theme-picker input {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+
+
+/* Sección hero de inicio */
+#hero {
+  width: 100%;
+  padding-top: 4rem;
+  display: grid;
+  gap: 10rem;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#hero .col-izquierda {
+  grid-column: auto / span 4;
+}
+
+#hero .col-izquierda > img {
+  max-width: 100%;
+}
