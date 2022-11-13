@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
+@font-face {
+  font-family: 'Poppins';
+  src: url(/fonts/Poppins-Regular.ttf);
+}
 
 /* ESTILOS GENERALES Y RESETS */
 * {
@@ -8,6 +11,12 @@
   box-sizing: border-box;
 }
 
+
+/* Colores para los distintos themes
+  Utilizando la propiedad ":has" comprobamos cuál 
+  de los chackboxes está marcado y aplicamos los 
+  estilos correspondientes
+*/
 :root {
   --primario: #1d1d1d;
   --primario-claro: #303030;
@@ -15,6 +24,7 @@
   --texto-nav: white;
   --acento: #FFEA28;
   --title-text: 'Bangers', cursive;
+  --border-radius: .5rem
 }
 
 :root:has(#superman:checked) {
@@ -34,23 +44,55 @@
 }
 
 :root:has(#hawkeye:checked) {
-  --primario: #895cb3;
-  --primario-claro: #7c41c9;
-  --texto: #131313;
+  --primario: #6c1eb6;
+  --primario-claro: #4f149b;
+  --texto: hsl(271, 100%, 91%);
   --texto-nav: white;
-  --acento: #00274c;
+  --acento: #FFEA28;
+}
+
+:root:has(#thor:checked) {
+  --primario: #1d1d1d;
+  --primario-claro: #750b0b;
+  --texto: white;
+  --texto-nav: white;
+  --acento: #ffda75;
+}
+
+:root:has(#hulk:checked) {
+  --primario: #206e0c;
+  --primario-claro: #4f149b;
+  --texto: hsl(0, 0%, 100%);
+  --texto-nav: white;
+  --acento: #9dff42;
+  /* --acento: #FFEA28; */
 }
 
 body {
   background-color: var(--primario);
   color: var(--texto);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
+  line-height: 1.6em;
+  font-weight: 500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
 }
 
 main {
   max-width: 80%;
   margin: 0 auto;
+}
+
+section {
+  padding-bottom: 10rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--acento);
 }
 
 .flex {
@@ -73,15 +115,18 @@ a, a:visited {
   color: var(--texto);
 }
 
-
 /* MENÚ DE NAVEGACIÓN */
 #barra-nav {
   width: 100vw;
   height: 80px;
   background-color: var(--primario-claro);
   position: fixed;
+  z-index: 10;
   top: 0;
-  box-shadow: 0px 1px 10px var(--acento);
+}
+
+.sombra {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 nav {
@@ -139,7 +184,7 @@ aside {
 
 #theme-picker > fieldset {
   border: 2px solid var(--acento);
-  border-radius: .5rem;
+  border-radius: var(--border-radius);
   padding: 1rem;
 }
 
@@ -167,9 +212,7 @@ aside {
 #hero {
   width: 100%;
   padding-top: 4rem;
-  display: grid;
-  gap: 10rem;
-  grid-template-columns: repeat(12, 1fr);
+  
 }
 
 #hero .col-izquierda {
@@ -178,4 +221,152 @@ aside {
 
 #hero .col-izquierda > img {
   max-width: 100%;
+  border-radius: var(--border-radius);
+}
+
+#hero .col-derecha {
+  grid-column: auto / span 5;
+}
+
+#hero h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: var(--acento);
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  line-height: 1.7em;
+  max-width: 80ch;
+  margin: 0 auto;
+}
+
+#hero .presentacion {
+  margin-bottom: 4rem;
+}
+
+#noticia-destacada {
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: var(--primario-claro);
+}
+
+#noticia-destacada small {
+  display: block;
+  font-weight: bold;
+  font-size: .9rem;
+  color: var(--acento);
+  margin-bottom: 0.5rem;
+}
+
+#noticia-destacada h3 {
+  margin-bottom: 1rem;
+}
+
+/* Sección de reseñas de inicio */
+.wrapper-resenas {
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.tarjeta-resena {
+  grid-column: auto / span 3;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  transition: all .3s ease;
+  height: max-content;
+  overflow: hidden;
+}
+
+.tarjeta-resena-foto {
+  border-radius: var(--border-radius);
+  object-fit: contain;
+  overflow: hidden;
+  width: 100%;
+}
+
+#ultimas-resenas .tarjeta-resena-foto img{
+  width: 100%;
+}
+
+.tarjeta-resena-contenido {
+  background-color: var(--primario-claro);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: -28%;
+  min-height: 245px;
+  transition: 0.3s;
+}
+
+.tarjeta-resena a {
+  text-decoration: none;
+  position: relative;
+}
+
+.tarjeta-resena:hover {
+  transform: scale(1.1);
+}
+
+.tarjeta-resena:hover .tarjeta-resena-contenido {
+  bottom: 0;
+}
+
+.tarjeta-resena-contenido h3 {
+  color: var(--acento);
+}
+
+.tarjeta-resena-contenido .extracto {
+  opacity: 0;
+}
+
+.tarjeta-resena:hover .tarjeta-resena-contenido .extracto {
+  opacity: 1;
+}
+
+
+.tarjeta-resena .tarjeta-resena-contenido .enlace {
+  color: var(--acento);
+}
+
+/* CABECERA DE PÁGINAS INTERIORES */
+.cabecera {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.cabecera h1 {
+  font-size: 3rem;
+  color: var(--acento);
+  padding-bottom: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  #hero {
+    display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(8, 1fr);
+  }
+
+  .wrapper-resenas {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #hero {
+      gap: 10rem;
+      grid-template-columns: repeat(12, 1fr);
+  }
+
+  .wrapper-resenas {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
