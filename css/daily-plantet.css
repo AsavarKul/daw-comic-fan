@@ -7,9 +7,14 @@
   background: url('/img/paper-texture.webp');
 }
 
-#daily-planet h2, #daily-planet h3, #daily-planet p {
+#daily-planet h2, #daily-planet h3 {
   font-family: 'Playfair Display', serif;
   color: #1d1d1d;
+}
+
+#daily-planet p {
+  font-family: 'Poppins',
+    sans-serif;
 }
 
 #daily-planet h2,
