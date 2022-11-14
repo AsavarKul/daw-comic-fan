@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+
 #daily-planet {
   max-width: 1200px;
   margin: 0 auto;
@@ -15,6 +17,7 @@
 #daily-planet p {
   font-family: 'Poppins',
     sans-serif;
+  color: #1d1d1d;
 }
 
 #daily-planet h2,
