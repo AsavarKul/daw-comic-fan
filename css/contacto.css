@@ -1,0 +1,90 @@
+.wrapper {
+  padding-top: 4rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.col-foto {
+  max-height: 80vh;
+}
+
+.col-foto img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.cabecera-contacto {
+  padding-bottom: 2rem;
+}
+
+.cabecera-contacto .links-sociales {
+  padding: 2rem 0;
+
+}
+
+.cabecera-contacto .fab {
+  font-size: 3rem;
+  margin: 0 1rem;
+}
+
+.cabecera-contacto .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-radius: .5rem;
+}
+.cabecera-contacto .fa-facebook {
+  color: #2038B7;
+  background-color: white;
+  border-radius: 50%;
+}
+.cabecera-contacto .fa-twitter {
+  color: rgb(45, 146, 241);
+}
+
+
+.cabecera-contacto h1{
+  padding-bottom: 1rem;
+}
+
+#contacto form {
+  max-width: 800px;
+}
+
+form input:not([type="submit"]), form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--texto);
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--acento);
+}
+
+input {
+  height: 3rem;
+}
+
+input:focus, textarea:focus {
+  outline-color: var(--acento);
+}
+
+form label {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.boton {
+  background: transparent;
+  border: 2px solid var(--acento);
+  color: var(--acento);
+  width: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all .25s;
+}
+
+.boton:hover {
+  background-color: var(--acento);
+    color: var(--primario);
+}

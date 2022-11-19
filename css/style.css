@@ -81,6 +81,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
 }
 
+h1 {
+  color: var(--acento);
+}
+
 main {
   max-width: 80%;
   min-height: calc(100vh - 80px);
@@ -366,6 +370,7 @@ footer {
 }
 
 .links-sociales a {
+  display: inline-block;
   margin: 0 .5rem;
 }
 
