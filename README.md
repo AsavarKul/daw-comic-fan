@@ -7,6 +7,7 @@ Autoevaluación:
 - Funcionalidad: 10
 - Comentarios: 8
 - Legibilidad: 10
+- [Vídeo](https://youtu.be/TVwRa1-Yy7s)
 
 Repositorio en github: [Github](https://github.com/AsavarKul/daw-comic-fan)
 
