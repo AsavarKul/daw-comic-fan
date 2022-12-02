@@ -9,4 +9,5 @@ Autoevaluación:
 - Legibilidad: 10
 
 Repositorio en github: [Github](https://github.com/AsavarKul/daw-comic-fan)
+
 Link a la web publicada: [Website](https://comic-fan.netlify.app/)

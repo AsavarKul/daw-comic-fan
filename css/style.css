@@ -78,7 +78,7 @@ body {
   color: var(--texto);
   font-family: 'Poppins', sans-serif;
   position: relative;
-  line-height: 1.6em;
+  line-height: 1.7rem;
   font-weight: 500;
 }
 
@@ -277,6 +277,13 @@ aside {
 
 #noticia-destacada h3 {
   margin-bottom: 1rem;
+}
+
+/* Sección de presentación de la web */
+#presentacion {
+  max-width: 80ch;
+  font-size: 1.2rem;
+  margin: 0 auto;
 }
 
 /* Sección de reseñas de inicio */
