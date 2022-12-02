@@ -3,23 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible"
-        content="IE=edge">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-        href="css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/9ae2e47f5f.js" crossorigin="anonymous"></script>
   <title>ComicFan | Inicio</title>
 </head>
 
 <body>
-  <div id="barra-nav"
-       class="sombra">
+  <!-- MENU -->
+  <div id="barra-nav" class="sombra">
     <nav class="flex justify-between align-center">
       <div id="logo-sitio">Comic-Fan</div>
       <ul class="flex justify-between align-center">
-        <li class="flex justify-between align-center"><a class="activo"
-             href="#">Inicio</a></li>
+        <li class="flex justify-between align-center"><a class="activo" href="#">Inicio</a></li>
         <li><a href="estanteria/index.html">La estantería</a></li>
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -28,11 +25,10 @@
   </div>
 
   <main>
+    <!-- SECCION HERO EN 2 COLUMNAS -->
     <section id="hero">
       <div class="col col-izquierda">
-        <img class="hero-image"
-             src="/img/hero-image.jpg"
-             alt="Clark Kent en su escritorio">
+        <img class="hero-image" src="/img/hero-image.jpg" alt="Clark Kent en su escritorio">
       </div>
       <div class="col col-derecha">
         <div class="presentacion">
@@ -40,12 +36,10 @@
           <p class="subtitulo">Comic-Fan te trae reviews de las novedades del mundo del cómic además de las últimas
             noticias.</p>
         </div>
-        <article id="noticia-destacada"
-                 class="sombra">
+        <article id="noticia-destacada" class="sombra">
           <h2><small>Noticia destacada</small></h2>
-          <h3><a href="https://www.zonanegativa.com/ha-fallecido-carlos-pacheco-1961-2022/"
-               target="_blank"
-               rel="noreferer noopener">Ha fallecido Carlos Pacheco (1961 – 2022)</a></h3>
+          <h3><a href="https://www.zonanegativa.com/ha-fallecido-carlos-pacheco-1961-2022/" target="_blank"
+              rel="noreferer noopener">Ha fallecido Carlos Pacheco (1961 – 2022)</a></h3>
           <p class="extracto">Se ha ido uno de los nuestros. Carlos Pacheco Perujo ha sido un autor excepcional, un gran
             artista de los cómics, un
             enorme aficionado al género de los superhéroes, pero aún más una persona maravillosa e irrepetible. Su
@@ -54,6 +48,8 @@
         </article>
       </div>
     </section>
+
+    <!-- SECCIÖN ULTIMAS RESEÑAS -->
     <section id="ultimas-resenas">
       <h2>Últimas reseñas</h2>
       <div class="wrapper-resenas">
@@ -61,8 +57,7 @@
         <article class="tarjeta-resena sombra">
           <a href="/estanteria/resena.html">
             <div class="tarjeta-resena-foto">
-              <img src="/img/portadas/portada-saga.webp"
-                   alt="Portada Saga, volumen 1">
+              <img src="/img/portadas/portada-saga.webp" alt="Portada Saga, volumen 1">
             </div>
             <div class="tarjeta-resena-contenido">
               <h3>Saga: Volumen 1</h3>
@@ -81,8 +76,7 @@
         <article class="tarjeta-resena sombra">
           <a href="#">
             <div class="tarjeta-resena-foto">
-              <img src="/img/portadas/portada-sandman.webp"
-                   alt="Sandman: Volumen 3">
+              <img src="/img/portadas/portada-sandman.webp" alt="Sandman: Volumen 3">
             </div>
             <div class="tarjeta-resena-contenido">
               <h3>Sandman: Volumen 3</h3>
@@ -99,8 +93,7 @@
         <article class="tarjeta-resena sombra">
           <a href="#">
             <div class="tarjeta-resena-foto">
-              <img src="/img/portadas/portada-Y.jpg"
-                   alt="Y, el último hombre">
+              <img src="/img/portadas/portada-Y.jpg" alt="Y, el último hombre">
             </div>
             <div class="tarjeta-resena-contenido">
               <h3>Y, el último hombre</h3>
@@ -115,8 +108,7 @@
         <article class="tarjeta-resena sombra">
           <a href="#">
             <div class="tarjeta-resena-foto">
-              <img src="/img/portadas/portada-world-war-hulk.jpg"
-                   alt="World War Hulk">
+              <img src="/img/portadas/portada-world-war-hulk.jpg" alt="World War Hulk">
             </div>
             <div class="tarjeta-resena-contenido">
               <h3>World War Hulk: Integral</h3>
@@ -131,72 +123,66 @@
 
     </section>
   </main>
+
+  <!-- SELECTOR DE THEME -->
   <aside id="theme-picker">
     <fieldset class="flex column">
       <legend>Theme:</legend>
       <div>
-        <label for="batman"><img class="logo-picker"
-               src="../img/batman-icon.png"
-               alt="icono batman"
-               title="batman">
-          <input type="radio"
-                 name="theme"
-                 id="batman">
+        <!-- Utilizamos una serie de inputs tipo radio para elegir el tema. Según el elegido el CSS sabrá que colores aplicar -->
+        <label for="batman"><img class="logo-picker" src="../img/icons/batman-icon.png" alt="icono batman"
+            title="batman">
+          <input type="radio" name="theme" id="batman">
         </label>
       </div>
       <div>
-        <label for="superman"><img class="logo-picker"
-               src="../img/Superman_shield.svg"
-               alt="icono superman"
-               title="superman">
-          <input type="radio"
-                 name="theme"
-                 id="superman">
+        <label for="superman"><img class="logo-picker" src="../img/icons/Superman_shield.svg" alt="icono superman"
+            title="superman">
+          <input type="radio" name="theme" id="superman">
         </label>
       </div>
       <div>
-        <label for="lobezno"><img class="logo-picker"
-               src="../img/wolverine-icon.webp"
-               alt="icono lobezno"
-               title="lobezno">
-          <input type="radio"
-                 name="theme"
-                 id="lobezno">
+        <label for="lobezno"><img class="logo-picker" src="../img/icons/wolverine-icon.webp" alt="icono lobezno"
+            title="lobezno">
+          <input type="radio" name="theme" id="lobezno">
         </label>
       </div>
       <div>
-        <label for="hawkeye"><img class="logo-picker"
-               src="../img/hawkeye-icon.webp"
-               alt="icono hawkeye"
-               title="hawkeye">
-          <input type="radio"
-                 name="theme"
-                 id="hawkeye">
+        <label for="hawkeye"><img class="logo-picker" src="../img/icons/hawkeye-icon.webp" alt="icono hawkeye"
+            title="hawkeye">
+          <input type="radio" name="theme" id="hawkeye">
         </label>
       </div>
       <div>
-        <label for="thor"><img class="logo-picker"
-               src="../img/thor-icon.webp"
-               alt="icono thor"
-               title="thor">
-          <input type="radio"
-                 name="theme"
-                 id="thor">
+        <label for="thor"><img class="logo-picker" src="../img/icons/thor-icon.webp" alt="icono thor" title="thor">
+          <input type="radio" name="theme" id="thor">
         </label>
       </div>
       <div>
-        <label for="hulk"><img class="logo-picker"
-               src="../img/hulk-icon.webp"
-               alt="icono hulk"
-               title="hulk">
-          <input type="radio"
-                 name="theme"
-                 id="hulk">
+        <label for="hulk"><img class="logo-picker" src="../img/icons/hulk-icon.webp" alt="icono hulk" title="hulk">
+          <input type="radio" name="theme" id="hulk">
         </label>
       </div>
     </fieldset>
   </aside>
-
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-wrapper">
+      <div class="col-copyright">
+        <p class="copyright">©2022 Jon Iker Negrete</p>
+        <p class="copyright">Todos los logos e imágenes utilizados en este fansite son propiedad de sus respectivos
+          propietarios legales.</p>
+      </div>
+      <div class="col-redes">
+        <h4>Síguenos en nuestras redes:</h4>
+        <div class="links-sociales">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="js/theme.js"></script>
 </body>

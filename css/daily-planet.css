@@ -7,6 +7,8 @@
   padding: 2rem;
   background-color: rgb(221, 221, 221);
   background: url('/img/paper-texture.webp');
+  padding-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
 #daily-planet h2, #daily-planet h3 {

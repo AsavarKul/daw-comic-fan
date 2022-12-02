@@ -1,0 +1,80 @@
+/* Estilos para la página de contacto */
+
+.wrapper {
+  padding-top: 4rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.col-foto {
+  max-height: 80vh;
+}
+
+.col-foto img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.cabecera-contacto {
+  padding-bottom: 2rem;
+}
+
+.cabecera-contacto .links-sociales {
+  padding: 2rem 0;
+
+}
+
+.cabecera-contacto .fab {
+  font-size: 3rem;
+  margin: 0 1rem;
+}
+
+.cabecera-contacto h1{
+  padding-bottom: 1rem;
+}
+
+#contacto form {
+  max-width: 800px;
+}
+
+/* Estilos para los inputs, excluyendo el boton de envío */
+form input:not([type="submit"]), form textarea {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: var(--texto);
+  font-size: 1.3rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--acento);
+}
+
+input {
+  height: 3rem;
+}
+
+input:focus, textarea:focus {
+  outline-color: var(--acento);
+}
+
+form label {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* Botón de envío */
+.boton {
+  background: transparent;
+  border: 2px solid var(--acento);
+  color: var(--acento);
+  width: 100%;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all .25s;
+}
+
+.boton:hover {
+  background-color: var(--acento);
+    color: var(--primario);
+}

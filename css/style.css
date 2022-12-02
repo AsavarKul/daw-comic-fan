@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 @font-face {
   font-family: 'Poppins';
   src: url(/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Bangers';
+  src: url(/fonts/Bangers-Regular.ttf);
 }
 
 /* ESTILOS GENERALES Y RESETS */
@@ -81,8 +86,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2em;
 }
 
+h1 {
+  color: var(--acento);
+}
+
 main {
   max-width: 80%;
+  min-height: calc(100vh - 80px);
   margin: 0 auto;
 }
 
@@ -200,6 +210,11 @@ aside {
   display: block;
   margin-bottom: 1rem;
   position: relative;
+  transition: all .25s;
+}
+
+#theme-picker label:hover {
+  transform: rotate(15deg) scale(1.15);
 }
 
 #theme-picker input {
@@ -335,6 +350,43 @@ aside {
   color: var(--acento);
 }
 
+
+/* ESTILOS DEL FOOTER */
+footer {
+  background-color: var(--primario-claro);
+  padding: 2rem;
+}
+
+.footer-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-redes h4 {
+  color: var(--acento);
+  margin-bottom: 0.5rem;
+}
+
+.col-redes .links-sociales {
+  display: flex;
+  justify-content: center;
+}
+
+.links-sociales a {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+
+.links-sociales a > i {
+  font-size: 1.5rem;
+  transition: all .2s;
+}
+
+.links-sociales a:hover > i {
+  transform: rotate(15deg) scale(1.15);
+}
 /* CABECERA DE PÁGINAS INTERIORES */
 .cabecera {
   padding: 2.5rem;
